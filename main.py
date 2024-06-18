@@ -1,7 +1,10 @@
 import requests
 import selectorlib
-import time
 import creds
+from datetime import datetime
+
+output_file = "data.txt"
+date = datetime.today().strftime("%d/%m/%Y %H:%M:%S")
 
 def scrape(url):
     """Scrape the page source from the URL"""
@@ -16,8 +19,13 @@ def extract(source):
     value = extractor.extract(source)["temperature"]
     return value
 
+def store(date, temperature):
+    with open(output_file, "a") as file:
+        file.write(f"{date}, {temperature}" + "\n")
+
+
 
 if __name__ == "__main__":
     scraped = scrape(creds.URL)
-    extracted = extract(scraped)
-    print(extracted)
+    temperature = extract(scraped)
+    store(date, temperature )
