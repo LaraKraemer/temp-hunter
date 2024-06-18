@@ -300,6 +300,7 @@ pip-selfcheck.json
 
 creds.py
 data.txt
+extract.yaml
 
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm,venv
 
