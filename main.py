@@ -9,6 +9,15 @@ def scrape(url):
     source = response.text
     return source
 
+
+def extract(source):
+    """extract temp data"""
+    extractor = selectorlib.Extractor.from_yaml_file("extract.yaml")
+    value = extractor.extract(source)["temperature"]
+    return value
+
+
 if __name__ == "__main__":
     scraped = scrape(creds.URL)
-    print(scraped)
+    extracted = extract(scraped)
+    print(extracted)
