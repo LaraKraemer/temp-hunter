@@ -6,6 +6,7 @@ from datetime import datetime
 output_file = "data.txt"
 date = datetime.today().strftime("%d/%m/%Y %H:%M:%S")
 
+
 def scrape(url):
     """Scrape the page source from the URL"""
     response = requests.get(url)
@@ -19,10 +20,11 @@ def extract(source):
     value = extractor.extract(source)["temperature"]
     return value
 
+
 def store(date, temperature):
+    """store date, temp data"""
     with open(output_file, "a") as file:
         file.write(f"{date}, {temperature}" + "\n")
-
 
 
 if __name__ == "__main__":
