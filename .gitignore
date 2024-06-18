@@ -298,9 +298,9 @@ pyrightconfig.json
 pyvenv.cfg
 pip-selfcheck.json
 
-creds.py
-data.txt
-extract.yaml
+src/creds.py
+files/data.txt
+files/extract.yaml
 
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm,venv
 
