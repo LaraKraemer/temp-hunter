@@ -1,6 +1,6 @@
 # Scraping temperature data 
-This was a project from my udemy bootcamp where I scrape temperature data. 
-The focus of the lectures was on learning how to scrape and store scraped the data.
+This was a project from my Udemy bootcamp where I scraped temperature data. 
+The lectures focused on learning how to scrape and store the data.
 
 ## How to work with this repository
 1. Clone the repository
@@ -14,4 +14,4 @@ The focus of the lectures was on learning how to scrape and store scraped the da
 
 
 ## Credits 
-Go to my teacher Ardit Sulce from my online Python bootcamp on Udemy
+Go to my teacher Ardit Sulce from my Python bootcamp on Udemy
