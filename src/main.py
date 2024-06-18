@@ -1,9 +1,9 @@
 import requests
 import selectorlib
-import creds
+from src import creds
 from datetime import datetime
 
-output_file = "data.txt"
+output_file = "../files/data.txt"
 date = datetime.today().strftime("%d/%m/%Y %H:%M:%S")
 
 
@@ -16,7 +16,7 @@ def scrape(url):
 
 def extract(source):
     """extract temp data"""
-    extractor = selectorlib.Extractor.from_yaml_file("extract.yaml")
+    extractor = selectorlib.Extractor.from_yaml_file("../files/extract.yaml")
     value = extractor.extract(source)["temperature"]
     return value
 
