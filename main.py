@@ -36,4 +36,7 @@ if __name__ == "__main__":
         scraped = scrape(creds.URL)
         temperature = extract(scraped)
         store(date, temperature)
-    time.sleep(2)
+    time.sleep(5)
+
+# Close the connection
+conection.close()
